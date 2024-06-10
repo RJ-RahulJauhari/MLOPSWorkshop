@@ -27,7 +27,6 @@ r2 = r2_score(y_test, y_pred)
 print(f'Mean Squared Error (MSE): {mse}')
 print(f'R-squared (R²): {r2}')
 
-# Actual vs Predicted plot
 plt.subplot(1, 2, 1)
 plt.scatter(y_test, y_pred, alpha=0.5)
 plt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], color='red', linestyle='--')
@@ -35,7 +34,6 @@ plt.xlabel('Actual Quality')
 plt.ylabel('Predicted Quality')
 plt.title('Actual vs Predicted Wine Quality')
 
-# Residuals plot
 plt.subplot(1, 2, 2)
 residuals = y_test - y_pred
 plt.scatter(y_pred, residuals, alpha=0.5)
